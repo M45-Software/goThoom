@@ -1,0 +1,14 @@
+goThoom 65 changes since test64.
+
+Rendering and interface:
+- Updated Ebitengine to 2.10.6, including fixes for uneven frame timing, incomplete circles, line joins, and cached text glyphs.
+- Includes fixes for macOS window-resizing crashes and gamepad handling.
+- Prevents duplicate notification sounds on Windows.
+
+Scripting:
+- Updated the script interpreter with fixes for closures, loop variables, variable declarations, type conversions, and Go 1.27 compatibility.
+
+Security and compatibility:
+- Built with Go 1.27.3, including current standard-library security fixes.
+- Updated supporting libraries for networking, text, images, clipboard access, audio, and operating-system integration.
+- Updated the Clan Lord client version to 1510.
