@@ -205,7 +205,7 @@ From the repository root:
 ```
 
 This copies this directory and the shared `internal/inputkeys` package into a
-temporary Go module, resolves dependencies, runs tests, and builds the example. Use Go 1.27.1; desktop
+temporary Go module, resolves dependencies, runs tests, and builds the example. Use Go 1.27.3; desktop
 builds disable Cgo. Tests need a display; on headless
 Linux run the command with `xvfb-run -a`.
 

@@ -10,7 +10,9 @@ if [ ! -s "${SCRIPT_DIR}/../source/data/audio/qt.sf2" ]; then
   exit 1
 fi
 
-GO_VERSION="${GO_VERSION:-1.27.1}"
+GO_VERSION="${GO_VERSION:-1.27.3}"
+# Select a different compiler by overriding both its version and checksum.
+GO_SHA256="${GO_SHA256:-65efbc80fdc1fa2cd2631cad5b481777a68e8725f34e89f50fc6ac714e379b40}"
 export PATH="/usr/local/go/bin:$PATH"
 
 if ! command -v apt-get >/dev/null 2>&1; then
@@ -36,6 +38,7 @@ if ! command -v go >/dev/null 2>&1 || [[ "$(go version | awk '{print $3}')" != "
   trap 'rm -rf "${tmpdir}"' EXIT
   curl -fsSLo "${tmpdir}/${required_go}.linux-amd64.tar.gz" \
     "https://go.dev/dl/${required_go}.linux-amd64.tar.gz"
+  printf '%s  %s\n' "$GO_SHA256" "${tmpdir}/${required_go}.linux-amd64.tar.gz" | sha256sum --check
   sudo rm -rf /usr/local/go
   sudo tar -C /usr/local -xzf "${tmpdir}/${required_go}.linux-amd64.tar.gz"
 fi

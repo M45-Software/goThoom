@@ -42,7 +42,7 @@
 ## Project layout
 
 - The Go module and client are under `source/` (`module gothoom`).
-- Use Go 1.27.1 from the official Go distribution. Do not use the system
+- Use Go 1.27.3 from the official Go distribution. Do not use the system
   `golang-go` package.
 - Desktop builds use `CGO_ENABLED=0`; no C compiler or macOS SDK is required.
 - Running the desktop client requires a display. Use Xvfb in a headless
