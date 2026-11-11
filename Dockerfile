@@ -10,8 +10,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  && rm -rf /var/lib/apt/lists/*
 
 # ---- Go toolchain ----
-ARG GO_VERSION=1.27.3
-ARG GO_SHA256=65efbc80fdc1fa2cd2631cad5b481777a68e8725f34e89f50fc6ac714e379b40
+ARG GO_VERSION=1.27.4
+ARG GO_SHA256=7226736c2339719cda28fbf3a54d71aa63bcefe376e98cef00034268dab24840
 RUN curl -fsSL https://go.dev/dl/go${GO_VERSION}.linux-amd64.tar.gz -o /tmp/go.tgz \
  && echo "${GO_SHA256}  /tmp/go.tgz" | sha256sum -c - \
  && tar -C /usr/local -xzf /tmp/go.tgz \

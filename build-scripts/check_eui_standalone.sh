@@ -14,7 +14,7 @@ export CGO_ENABLED=0
 # Keep the current import prefix for this extraction check. A published repo
 # will replace this prefix with its actual module path.
 go mod init gothoom
-go mod edit -go=1.27.3 \
+go mod edit -go=1.27.4 \
   -require=github.com/hajimehoshi/ebiten/v2@v2.10.6 \
   -require=github.com/go-text/typesetting@v0.3.5 \
   -require=golang.design/x/clipboard@v0.11.0 \

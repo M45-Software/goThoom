@@ -1,6 +1,6 @@
 module gothoom
 
-go 1.27.3
+go 1.27.4
 
 replace gt2 => ./gt2
 
